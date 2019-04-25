@@ -1,11 +1,11 @@
 [posts]
-other = "Posts"
+other = "貼文"
 
 [about]
-other = "About"
+other = "關於我"
 
 [languageBase]
-other = "en/"
+other = "tw/"
 
 [writtenBy]
 other = "Written by jacsaddict"

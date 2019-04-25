@@ -1,4 +1,10 @@
 <ul>
-    <li><a href="{{ "about" | relURL }}">{{ i18n "about" }}</a></li>
-    <li><a href="{{ "/" | relURL }}">{{ i18n "posts" }}</a></li>
+    {{ $address := i18n "languageBase" }}
+    <li><a href="{{ add $address "about" | relURL }}">{{ i18n "about" }}</a></li>
+    <li><a href="{{ add $address "/" | relURL }}">{{ i18n "posts" }}</a></li>
+    {{ if .IsTranslated }}
+        {{ range .Translations }}
+            <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ end}}
+    {{ end }}
 </ul>
